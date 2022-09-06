@@ -1,4 +1,10 @@
 # Problema de alocação de turmas em salas de aula
+
+## Trabalho desenvolvido por:
+Daniel Gustavo Favero <br>
+RA: 2157128 <br>
+Universidade Tecnológica Federal do Paraná - Câmpus Pato Branco
+
 ## Descrição do problema
 
 Dado um número $m$ de horários para um número $n$ salas em uma universidade, é desejado alocar a maior quantidade de turmas nas salas sem que haja conflito de horários.
