@@ -1,0 +1,93 @@
+Resultados:
+Tempo de execução: 0.0004059000000000701s
+Salas Alocadas: 
+           V109         V007         V107        V006         V104         V003  V008  V103  V105  V106  V108  V009  V101B  V101A  V102B  V102A  V112A  V112B
+0             0            0            0           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+1   DA23CV-3CVA  PG22NB-2ELA            0           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+2   DA23CV-3CVA  PG22NB-2ELA            0           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+3   DA23CV-3CVA   PA28CP-8CP  PG22NB-2ELB           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+4   DA23CV-3CVA   PA28CP-8CP  PG22NB-2ELB           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+5    ES26CP-6CP            0            0           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+6    AE23CP-3CP   CO28CP-6CP            0      IS29CP            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+7    AE23CP-3CP   CO28CP-6CP    DT21G-1GA      IS29CP            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+8             0  AE22CP-2CPA    DT21G-1GA           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+9    SO25CP-7CP  AE22CP-2CPA    DT21G-1GA           0            0            0     0     0     0     0     0     0      0      0      0      0      0      0
+10   SO25CP-7CP            0            0           0  CL21I-ING1B            0     0     0     0     0     0     0      0      0      0      0      0      0
+11            0    FE22S-2SI    QS24S-4SI   BD22S-2SI  CL21I-ING1B  AE22CP-2CPA     0     0     0     0     0     0      0      0      0      0      0      0
+12    OD26S-6SI    FE22S-2SI    QS24S-4SI   BD22S-2SI            0  AE22CP-2CPA     0     0     0     0     0     0      0      0      0      0      0      0
+13    OD26S-6SI    FE22S-2SI    QS24S-4SI  DT22NB-2CP    GP26S-5SI    IH24S-3SI     0     0     0     0     0     0      0      0      0      0      0      0
+14    OD26S-6SI    BD22S-2SI    PP24S-4SI  DT22NB-2CP    GP26S-5SI    IH24S-3SI     0     0     0     0     0     0      0      0      0      0      0      0
+15    OD26S-6SI    BD22S-2SI    PP24S-4SI  DT22NB-2CP    GP26S-5SI    IH24S-3SI     0     0     0     0     0     0      0      0      0      0      0      0
+
+           V109         V007         V107         V006         V104        V003       V008  V103  V105  V106  V108  V009  V101B  V101A  V102B  V102A  V112A  V112B
+0             0            0            0            0            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+1             0            0            0  EG21NB-1CVA            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+2             0            0            0  EG21NB-1CVA            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+3   CP21NB-1MCA  CP21NB-1MCB   PA28CP-8CP  EG21NB-1CVA            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+4   CP21NB-1MCA  CP21NB-1MCB   PA28CP-8CP  EG21NB-1CVA            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+5             0            0   ES26CP-6CP            0            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+6    IE27CP-7CP   AP25CP-5CP   ES26CP-6CP   SE28CP-8CP  PG21NB-1ELA           0          0     0     0     0     0     0      0      0      0      0      0      0
+7    IE27CP-7CP   AP25CP-5CP   ES26CP-6CP   SE28CP-8CP  PG21NB-1ELA           0          0     0     0     0     0     0      0      0      0      0      0      0
+8    AE23CP-3CP   CO28CP-6CP   CD27CP-7CP  PG21NB-1ELB            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+9    AE23CP-3CP   CO28CP-6CP   CD27CP-7CP  PG21NB-1ELB            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+10            0            0            0            0            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+11    OO23S-3SI    CL21S-1SL            0    MP24S-4SI            0  DJ28CP-8CP  PM25S-5SI     0     0     0     0     0      0      0      0      0      0      0
+12    OO23S-3SI    CL21S-1SL  LI51LT-1LNA    MP24S-4SI    PM26S-6SI  DJ28CP-8CP  PM25S-5SI     0     0     0     0     0      0      0      0      0      0      0
+13    LA24S-4SI            0  LI51LT-1LNA    IS21S-1SL    PM26S-6SI           0  PM25S-5SI     0     0     0     0     0      0      0      0      0      0      0
+14            0    OO24S-4SI    TS25S-6SI    IS21S-1SL            0           0  PM25S-5SI     0     0     0     0     0      0      0      0      0      0      0
+15    SA25S-5SI    OO24S-4SI    TS25S-6SI            0            0           0          0     0     0     0     0     0      0      0      0      0      0      0
+
+           V109         V007         V107         V006         V104  V003  V008  V103  V105  V106  V108  V009  V101B  V101A  V102B  V102A  V112A  V112B
+0             0            0            0            0            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+1   CP21NB-1CVA  CP21NB-1CVB  PA27CV-7CVA  PG22NB-2ELA            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+2   CP21NB-1CVA  CP21NB-1CVB  PA27CV-7CVA  PG22NB-2ELA            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+3   PG22NB-2ELB            0  PA27CV-7CVA            0            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+4   PG22NB-2ELB            0  PA27CV-7CVA            0            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+5             0  FP21NB-1CPA  FP21NB-1CPB            0            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+6    BD26CP-6CP  FP21NB-1CPA  FP21NB-1CPB  PG21NB-1ELB  EG21NB-1CVB     0     0     0     0     0     0     0      0      0      0      0      0      0
+7    BD26CP-6CP  FP21NB-1CPA  FP21NB-1CPB  PG21NB-1ELB  EG21NB-1CVB     0     0     0     0     0     0     0      0      0      0      0      0      0
+8    BD27CP-7CP            0            0            0  EG21NB-1CVB     0     0     0     0     0     0     0      0      0      0      0      0      0
+9    BD27CP-7CP            0            0            0  EG21NB-1CVB     0     0     0     0     0     0     0      0      0      0      0      0      0
+10    ED22S-2SI            0  CL21I-ING1B            0            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+11    SA25S-5SI    AD23S-4SI  CL21I-ING1B   AO26CP-6CP    PW26S-6SI     0     0     0     0     0     0     0      0      0      0      0      0      0
+12    SA25S-5SI    AD23S-4SI  LI51LT-1LNA   AO26CP-6CP    PW26S-6SI     0     0     0     0     0     0     0      0      0      0      0      0      0
+13    SA25S-5SI    AD23S-4SI  LI51LT-1LNA            0    PW26S-6SI     0     0     0     0     0     0     0      0      0      0      0      0      0
+14    ED22S-2SI    PW25S-5SI   LC24B-4BSA    PD24S-4SI            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+15    ED22S-2SI    PW25S-5SI   LC24B-4BSA    PD24S-4SI            0     0     0     0     0     0     0     0      0      0      0      0      0      0
+
+          V109         V007         V107         V006         V104        V003  V008  V103  V105  V106  V108  V009  V101B  V101A  V102B  V102A  V112A  V112B
+0            0            0            0            0            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+1            0  CP21NB-1MCA  CP21NB-1MCB            0            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+2    DT21G-1GB  CP21NB-1MCA  CP21NB-1MCB            0            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+3    DT21G-1GB  CP21NB-1CVA  CP21NB-1CVB            0            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+4    DT21G-1GB  CP21NB-1CVA  CP21NB-1CVB            0            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+5            0   AP25CP-5CP            0  FP21NB-1CPA  FP21NB-1CPB           0     0     0     0     0     0     0      0      0      0      0      0      0
+6   PO24CP-4CP   AP25CP-5CP   CD27CP-7CP  FP21NB-1CPA  FP21NB-1CPB  SI27CP-8CP     0     0     0     0     0     0      0      0      0      0      0      0
+7   PO24CP-4CP            0   CD27CP-7CP  FP21NB-1CPA  FP21NB-1CPB  SI27CP-8CP     0     0     0     0     0     0      0      0      0      0      0      0
+8   SL24CP-4CP   BD27CP-7CP   AO26CP-6CP       IS29CP            0           0     0     0     0     0     0     0      0      0      0      0      0      0
+9   SL24CP-4CP   BD27CP-7CP   AO26CP-6CP       IS29CP  PG21NB-1ELA           0     0     0     0     0     0     0      0      0      0      0      0      0
+10           0            0            0            0  PG21NB-1ELA           0     0     0     0     0     0     0      0      0      0      0      0      0
+11   BD21S-1SI   DJ28CP-8CP     II31MTEC    LA24S-4SI    PW26S-6SI           0     0     0     0     0     0     0      0      0      0      0      0      0
+12   BD21S-1SI   DJ28CP-8CP     II31MTEC    LA24S-4SI    PW26S-6SI           0     0     0     0     0     0     0      0      0      0      0      0      0
+13   ED22S-2SI    PW25S-5SI    LT21S-1SI    LA24S-4SI    PW26S-6SI           0     0     0     0     0     0     0      0      0      0      0      0      0
+14   ED22S-2SI    PW25S-5SI    LT21S-1SI    PD24S-4SI    PW26S-6SI   MQ25A-5AS     0     0     0     0     0     0      0      0      0      0      0      0
+15   ED22S-2SI    PW25S-5SI    LT21S-1SI    PD24S-4SI            0   MQ25A-5AS     0     0     0     0     0     0      0      0      0      0      0      0
+
+           V109        V007        V107       V006  V104  V003  V008  V103  V105  V106  V108  V009  V101B  V101A  V102B  V102A  V112A  V112B
+0             0           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+1   PA27CV-7CVB           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+2   PA27CV-7CVB           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+3   PA27CV-7CVB           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+4   PA27CV-7CVB           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+5             0           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+6   DA23CV-3CVB  SO25CP-7CP  TC28CP-8CP          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+7   DA23CV-3CVB  SO25CP-7CP  TC28CP-8CP          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+8   DA23CV-3CVB  SI27CP-8CP           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+9   DA23CV-3CVB  SI27CP-8CP           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+10            0           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+11    OO24S-4SI   TI26S-6SI           0  PD25S-5SL     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+12    OO24S-4SI   TI26S-6SI           0  PD25S-5SL     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+13    DT32M-2MN   TI26S-6SI   AD23S-42I  PD25S-5SL     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+14    DT32M-2MN           0   AD23S-42I          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+15            0           0           0          0     0     0     0     0     0     0     0     0      0      0      0      0      0      0
+

@@ -1,58 +1,94 @@
-import sys
+from audioop import reverse
+from time import process_time
 
 from file_reader import file_reader
-from parse_rooms_data import parse_rooms_data
-from parse_schedules_data import parse_schedules_data
+from parse_classrooms_data import parse_classrooms_data
+from parse_subjects_data import parse_subjects_data
 from write_results import write_results
 
-roomsFile = file_reader("data/rooms.txt")
-schedulesFile = file_reader("data/schedules.txt")
+classroomFile = file_reader("data/utfpr/rooms.txt")
+subjectsFile = file_reader("data/utfpr/subjects.txt")
+
+classes = parse_subjects_data(subjectsFile)
+classrooms = parse_classrooms_data(classroomFile)
 
 
-def classroom_assign(classes, rooms, total_hours):
-    total_classrooms = len(rooms)
-    agenda = [[0] * total_classrooms for i in range(total_hours)]
+def overlap(start_time: int, end_time: int, current_classroom: int, Sk: list):
+    availability = []
 
-    total_assigned_classes = 0
+    for i in range(start_time, end_time):
+        if Sk[i][current_classroom] != 0:
+            availability.append(1)
 
-    # ordernar as turmas C em ordem crescente de tempo de início (Si)
-    classes.sort(key=lambda i: i[1])
-
-    for i in range(0, len(classes)):
-        d = 0
-        j = i
-        while (j < len(classes)) and (d < total_classrooms):
-            start = classes[j][1]
-            finish = classes[j][1] + classes[j][2]
-
-            # se: ci é compatível com uma das d salas abertas, adicione ci a essa sala
-            if (agenda[start][d] == 0) and (agenda[finish][d] == 0):
-                total_assigned_classes += 1
-                for k in range(start, finish + 1):
-                    agenda[k][d] = classes[j][0]
-
-                j += 1
-            # senão: abra a sala d + 1 e adicione ci a essa nova sala
-            else:
-                # a sala d + 1 está disponível?
-                if (d + 1) < total_classrooms:
-                    d += 1
-                # voltar a verificar na primeira sala
-                else:
-                    d = 0
-                    j += 1
-
-    return [agenda, total_assigned_classes]
+    # Se pelo menos um horário não é compatível, não é possível alocar a sala
+    if 1 in availability:
+        return True
+    else:
+        return False
 
 
-# Escolher as turmas disponíveis baseado nos dias da semana
-# 1 - Segunda-feira
-# 2 - Terça-feira
-# 3 - Quarta-feira
-# 4 - Quinta-feira
-# 5 - Sexta-feira
-# 6 - Sábado
-write_results(classroom_assign,
-              [parse_schedules_data(schedulesFile, int(
-                  sys.argv[1])), parse_rooms_data(roomsFile), 14],
-              "greedy_method_results")
+def available_class(L: list, classrooms: list, Sk: list):
+    for i in range(0, len(classrooms) - 1):
+        start_time = L[1]
+        end_time = L[2] + 1
+
+        # Verificar as retrições:
+        if (
+            # a) Em uma mesma sala e horário, não poderá haver duas turmas alocadas
+            overlap(start_time, end_time, i, Sk) is False and
+
+            # b) Uma sala não pode receber mais alunos que ela comporta
+            # c) Utilizar o espaço de forma eficiente, ou seja, evitar alocar aulas de turmas pequenas em salas de maior capacidade
+            L[3] <= classrooms[i][1]
+        ):
+            # Retornar o índice da sala disponível para alocação
+            return i
+
+    return None
+
+
+def assign_class(L: list, D: int, Sk: list):
+    start_time = L[1]
+    end_time = L[2] + 1
+    for i in range(start_time, end_time):
+        Sk[i][D] = L[0]
+
+
+def generate_empty_solution(rows: int, columns: int):
+    return [[[0 for x in range(columns)] for y in range(rows)] for z in range(5)]
+
+
+def greedy_classroom_assign(classes: list, classrooms: list):
+    S = generate_empty_solution(16, len(classrooms))  # Solução do problema
+
+    # Resolver o problema para cada dia da semana
+    for i in range(0, 5):
+        # Solução do problema para um dia da semana
+        Sk = S[i]
+
+        # Disciplinas ordenadas por quantidade de alunos
+        C = classes[i]
+        C.sort(key=lambda j: j[3], reverse=True)
+
+        while len(C) > 0:
+            # Seleciona a primeira turma, ou seja, a que possui o maior número de alunos
+            L = C[0]
+
+            # Verificar se há salas disponíveis para turma L
+            D = available_class(L, classrooms, Sk)
+
+            if D is not None:
+                # Atribuir sala para turma L e atualizar solução
+                assign_class(L, D, Sk)
+
+            # Remover o primeiro elemento da lista, pois o mesmo já foi validado
+            C.pop(0)
+
+    return S
+
+
+algorithm_start_time = process_time()
+S = greedy_classroom_assign(classes, classrooms)
+algorithm_end_time = process_time()
+
+write_results('greedy_results', S, algorithm_end_time - algorithm_start_time)
