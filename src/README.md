@@ -76,6 +76,7 @@ fim
 ```
 
 > calcula_custo(C) itera sobre a solução e verifica a quantidade de vezes que os requisitos não essenciais são atendidos
+
 > reduz_custo(C) troca as disciplinas de lugar aleatoriamente para verificar se a quantidade de requisitos não essenciais é atendida
 
 Os resultados obtidos no refinamento se encontram em `results/local_search_results.txt`
