@@ -5,7 +5,7 @@
 - b) Uma sala não pode receber mais alunos que ela comporta - **ESSENCIAL**
 - c) Algumas salas já estão previamente reservadas, é preciso respeitar esse horário - **ESSENCIAL**
 - d) Evitar alocar aulas de turmas pequenas em salas de maior capacidade - **NÃO ESSENCIAL**
-- e) Sempre que possível, alocar a uma mesma sala alunos de um mesmo curso e período - **NÃO ESSENCIAL**
+- e) Sempre que possível, alocar a uma mesma sala alunos de um mesmo período e curso - **NÃO ESSENCIAL**
 - f) Se possível, cada uma das salas deve ser deixada vazia em pelo menos um horário ao longo do dia, de forma a possibilitar sua limpeza - **NÃO ESSENCIAL**
 - g) Se possível, utilizar o menor número de salas possível - **NÃO ESSENCIAL**
 

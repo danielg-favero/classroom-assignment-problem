@@ -25,7 +25,7 @@ def parse_subjects_data(scheduleFile):
                     # Período da disciplina
                     current_subject_data[4],
                     # Turnos de preferencia da disciplina
-                    current_subject_data[5].replace('\n', '').split(',')
+                    current_subject_data[5].replace('\n', '')
                 ])
 
         parsed_schedules.append(week_day_schedule)
