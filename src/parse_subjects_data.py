@@ -21,7 +21,11 @@ def parse_subjects_data(scheduleFile):
                     # Horário de fim
                     int(current_subject_data[2]) % 100,
                     # Quantidade de alunos matriculados
-                    int(current_subject_data[3])
+                    int(current_subject_data[3]),
+                    # Período da disciplina
+                    current_subject_data[4],
+                    # Turnos de preferencia da disciplina
+                    current_subject_data[5].replace('\n', '').split(',')
                 ])
 
         parsed_schedules.append(week_day_schedule)
