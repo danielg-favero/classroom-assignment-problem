@@ -1,7 +1,9 @@
 from greedy_method_utils import overlap, available_class, assign_class, generate_empty_solution, generate_previous_assigned_classes
 
 def greedy_classroom_assign(classes: list, classrooms: list):
-    S = generate_empty_solution(16, len(classrooms))  # Solução do problema
+    # Solução do problema vazia
+    S = generate_empty_solution(16, len(classrooms), 5)  
+
     # Gerar conjunto aleatório de salas reservadas
     S = generate_previous_assigned_classes(S)
 

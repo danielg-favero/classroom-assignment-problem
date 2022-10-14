@@ -12,6 +12,7 @@ from local_search_utils import cost
 classroomFile = file_reader("data/utfpr/rooms.txt")
 subjectsFile = file_reader("data/utfpr/subjects-01.txt")
 
+# Formatar dados dos arquivos para execução dos algoritmos
 classes = parse_subjects_data(subjectsFile)
 classrooms = parse_classrooms_data(classroomFile)
 

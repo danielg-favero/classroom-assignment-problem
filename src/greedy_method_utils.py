@@ -1,5 +1,6 @@
 import random
 
+# Verificar se duas turmas possuem mesmo horário ao fazer a alocação
 def overlap(start_time: int, end_time: int, current_classroom: int, Sk: list):
     availability = []
 
@@ -13,7 +14,7 @@ def overlap(start_time: int, end_time: int, current_classroom: int, Sk: list):
     else:
         return False
 
-
+# Verificar se há salas disponíveis para a turma
 def available_class(L: list, classrooms: list, Sk: list):
     for i in range(0, len(classrooms) - 1):
         start_time = L[1]
@@ -22,10 +23,10 @@ def available_class(L: list, classrooms: list, Sk: list):
         # Verificar as retrições essenciais:
         if (
             # a) Em uma mesma sala e horário, não poderá haver duas turmas alocadas
+            # c) Algumas salas já estão previamente reservadas, é preciso respeitar esse horário
             overlap(start_time, end_time, i, Sk) is False and
 
             # b) Uma sala não pode receber mais alunos que ela comporta
-            # c) Utilizar o espaço de forma eficiente, ou seja, evitar alocar aulas de turmas pequenas em salas de maior capacidade
             L[3] <= classrooms[i][1]
         ):
             # Retornar o índice da sala disponível para alocação
@@ -33,7 +34,7 @@ def available_class(L: list, classrooms: list, Sk: list):
 
     return None
 
-
+# Alocar turma a uma sala
 def assign_class(L: list, D: int, Sk: list):
     start_time = L[1]
     end_time = L[2] + 1
@@ -41,9 +42,11 @@ def assign_class(L: list, D: int, Sk: list):
         Sk[i][D] = L
 
 
-def generate_empty_solution(rows: int, columns: int):
-    return [[[0 for x in range(columns)] for y in range(rows)] for z in range(5)]
+# Conjunto vazia para inicializar a solução
+def generate_empty_solution(rows: int, columns: int, days: int):
+    return [[[0 for x in range(columns)] for y in range(rows)] for z in range(days)]
 
+# Gerar um conjunto aleatório de salas reservadas
 def generate_previous_assigned_classes(S: list):
     i = 0
 
