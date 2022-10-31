@@ -51,8 +51,8 @@ Entrada: R = { conjunto de todas as salas }
 Saída: Solução S
 
 inicio
-S <- {};
-C <- E; // Ordenar as disciplinas em forma decrescente pela quantidade de alunos matriculados
+S = {};
+C = E; // Ordenar as disciplinas em forma decrescente pela quantidade de alunos matriculados
 
 enquanto |C| > 0 faça
     L = C[0] // Seleciona a primeira turma, ou seja, a que possui o maior número de alunos
@@ -76,8 +76,8 @@ Entrada: S = { Solução inicial gerada }
 Saída: S' = { Solução melhorada }
 
 inicio
-    C <- S
-    custo_final <- 0
+    C = S
+    custo_final = 0
 
     custo_inical = calcula_custo(C) // Quantificação das restrições não essenciais para solução inicial
     enquanto custo_final <= custo_inicial
@@ -89,12 +89,53 @@ inicio
 fim
 ```
 
+
 > troca_turmas(C) troca as disciplinas de lugar aleatoriamente para verificar se a quantidade de requisitos não essenciais é atendida
 
 > calcula_custo(C) itera sobre a solução e verifica a quantidade de vezes que os requisitos não essenciais são atendidos
 
 
 Os resultados obtidos no refinamento se encontram em `results/local_search_results.txt`
+
+## Metaheurística de *Simulated Annealing*
+```
+Entrada: S0 = { Solução corrente }
+Entrada: T0 = { Temperatura inicial }
+Entrada: α = { Taxa de resfriamento }
+Entrada: SAmax = { Número máximo de iterações }
+Saída: S*
+
+inicio
+    S = S0
+    S' = S
+    T = T0
+    IterT = 0
+
+    enquanto (T > 0) faça
+        enquanto (IterT < SAmax) faça
+            IterT += 1
+            Gerar novo vizinho S' ∈ N(S)
+            ∆ = f(S’) – f(S)
+
+            se (∆ < 0) então
+                S = S'
+
+                se (f(S') < f(S*)) então
+                    S* = S'
+                senão
+                    selecione x ∈ [0, 1]
+
+                    se (x < e^(-∆/T)) então
+                        S* = S'
+            fim se
+        fim enquanto
+        T = α * T
+        IterT = 0
+    fim enquanto
+
+    retorne S*  
+fim
+```
 
 ## Referências Bibliográficas
 

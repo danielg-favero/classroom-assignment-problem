@@ -6,6 +6,7 @@ from parse_subjects_data import parse_subjects_data
 from write_results import write_results
 from greedy_method import greedy_classroom_assign
 from local_search import local_search
+from simulated_annealing import simulated_annealing
 from local_search_utils import cost
 
 # Ler arquivos das instâncias de testes
@@ -37,5 +38,17 @@ write_results(
     'local_search_results',
     local_search_solution,
     'Total de turmas: {}\nAtendimento dos requisitos não essenciais: {}\n'.format(len(subjectsFile), cost(local_search_solution, classrooms)),
+    algorithm_end_time - algorithm_start_time
+)
+
+# Execução do algoritmo de simulated annealing
+algorithm_start_time = process_time()
+simulated_annealing_solution = simulated_annealing(S, classrooms, 100, 0.6, 100)
+algorithm_end_time = process_time()
+
+write_results(
+    'simulated_annealing_results',
+    simulated_annealing_solution,
+    'Total de turmas: {}\nAtendimento dos requisitos não essenciais: {}\n'.format(len(subjectsFile), cost(simulated_annealing_solution, classrooms)),
     algorithm_end_time - algorithm_start_time
 )

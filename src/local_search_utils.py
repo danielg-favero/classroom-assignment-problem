@@ -74,6 +74,8 @@ def get_eficient_assigment_cost(subjects: list, classrooms: list, classroomIndex
     return eficient_assigment_cost
      
 def cost(S: list, classrooms: list):
+    C = S
+
     # Calcular o custo baseado nas restrições não essenciais
     same_period_cost = 0
     same_course_cost = 0
@@ -81,10 +83,10 @@ def cost(S: list, classrooms: list):
     less_classrooms_cost = 0
     eficient_assigment_cost = 0
 
-    for i in range(0, len(S)):
-        C = pd.DataFrame(S[i])
+    for i in range(0, len(C)):
+        Ck = pd.DataFrame(C[i])
 
-        for (columnIndex, subjects) in C.iteritems():
+        for (columnIndex, subjects) in Ck.iteritems():
             cleaning_hour_cost += get_cleaning_hour_cost(subjects)
             less_classrooms_cost += get_less_classrooms_cost(subjects)
             same_period_cost += get_same_period_cost(subjects)
