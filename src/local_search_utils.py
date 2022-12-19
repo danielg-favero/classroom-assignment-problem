@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import random
 
 def get_cleaning_hour_cost(subjects: list):
@@ -74,7 +75,7 @@ def get_eficient_assigment_cost(subjects: list, classrooms: list, classroomIndex
     return eficient_assigment_cost
      
 def cost(S: list, classrooms: list):
-    C = S
+    C = np.copy(S)
 
     # Calcular o custo baseado nas restrições não essenciais
     same_period_cost = 0
@@ -100,7 +101,7 @@ def cost(S: list, classrooms: list):
     return cleaning_hour_cost + less_classrooms_cost + same_period_cost + same_course_cost - eficient_assigment_cost
 
 def swap_classes(C: list, classrooms: list):
-    Ck = C
+    Ck = np.copy(C)
     i = 0
 
     # Realizar uma troca de turma por dia de semana
@@ -195,7 +196,7 @@ def swap_classes(C: list, classrooms: list):
                     # Alocar a 1º turma na sala da 2º turma
                     for j in range(first_start_time, first_end_time + 1):
                         Ck[i][j][second_column] = first_selected_class
-
+                    
                     i += 1
     
     return Ck

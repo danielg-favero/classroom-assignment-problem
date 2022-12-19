@@ -1,4 +1,5 @@
 import random
+from math import *
 
 # Verificar se duas turmas possuem mesmo horário ao fazer a alocação
 def overlap(start_time: int, end_time: int, current_classroom: int, Sk: list):
@@ -31,6 +32,25 @@ def available_class(L: list, classrooms: list, Sk: list):
         ):
             # Retornar o índice da sala disponível para alocação
             return i
+
+    return None
+
+def random_available_class(L: list, classrooms: list, Sk: list):
+    k = floor(random.random() * (len(classrooms) - 1))
+    start_time = L[1]
+    end_time = L[2] + 1
+
+    # Verificar as retrições essenciais:
+    if (
+        # a) Em uma mesma sala e horário, não poderá haver duas turmas alocadas
+        # c) Algumas salas já estão previamente reservadas, é preciso respeitar esse horário
+        overlap(start_time, end_time, k, Sk) is False and
+
+        # b) Uma sala não pode receber mais alunos que ela comporta
+        L[3] <= classrooms[k][1]
+    ):
+        # Retornar o índice da sala disponível para alocação
+        return k
 
     return None
 

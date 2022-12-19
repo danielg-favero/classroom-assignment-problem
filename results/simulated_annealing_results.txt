@@ -1,5 +1,0 @@
-Resultados:
-Total de turmas: 158
-Atendimento dos requisitos não essenciais: 0
-Tempo de execução: 48.1100497s
-Salas Alocadas: 

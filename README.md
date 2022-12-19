@@ -117,7 +117,7 @@ inicio
             Gerar novo vizinho S' ∈ N(S)
             ∆ = f(S’) – f(S)
 
-            se (∆ < 0) então
+            se (∆ > 0) então
                 S = S'
 
                 se (f(S') < f(S*)) então
